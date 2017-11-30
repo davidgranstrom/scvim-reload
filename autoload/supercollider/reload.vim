@@ -6,6 +6,7 @@ endfunction
 
 function! supercollider#reload#run()
   let curbuf = bufnr("%")
+  let save_cursor = getcurpos()
   bufdo call s:update()
   try
     " enter main
@@ -16,5 +17,5 @@ function! supercollider#reload#run()
   endtry
   " restore
   exe "buffer " . curbuf
-  exe "normal! zz"
+  call setpos(".", save_cursor)
 endfunction
