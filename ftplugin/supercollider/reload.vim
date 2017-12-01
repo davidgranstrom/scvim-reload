@@ -1,7 +1,6 @@
 " File: scvim-reload
 " Author: David Granström
 " Description: Reload (eval) SuperCollider projects
-" Last Modified: November 27, 2017
 " License: GPLv3 (same as scvim)
 
 if exists("b:did_ftplugin")
