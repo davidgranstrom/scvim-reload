@@ -23,7 +23,7 @@ This plugin doesn't provide any default mappings but you can use the mapping bel
 
 Example (put this in your vimrc)
 
-    nmap <buffer> <Enter> <Plug>(scvim-reload)
+    au! FileType supercollider nmap <buffer> <Enter> <Plug>(scvim-reload)
 
 ### Commands
 
