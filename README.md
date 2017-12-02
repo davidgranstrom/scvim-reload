@@ -5,12 +5,21 @@ Reload (re-evaluate) SuperCollider code split across many files. This plugin is 
 
 This plugin provides one command which will iterate over all loaded buffers and `:update` the ones with a `supercollider` filetype. It then evaluates (in sc) the file called "main.scd" and returns to the buffer from which the command was called.
 
+Notes
+-----
+
+This plugin relies on functionality from [scvim](https://github.com/supercollider/scvim)
+
+The plugin expects the file `main.scd` to exist in the current directory (i.e. `:pwd`)
+
+
 Installation
 ------------
 
 If you are using vim-plug add the following to your vimrc
 
     Plug 'davidgranstrom/scvim-reload'
+
 
 Usage
 -----
@@ -54,9 +63,3 @@ Here is an example layout of a project:
     ├── main.scd
     ├── patterns.scd
     └── synthdefs.scd
-
-## Notes
-
-This plugin relies on functionality from [scvim](https://github.com/supercollider/scvim)
-
-The plugin expects the file `main.scd` to be loaded in vim.
