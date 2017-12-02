@@ -3,10 +3,10 @@
 " Description: Reload (eval) SuperCollider projects
 " License: GPLv3 (same as scvim)
 
-if exists("b:did_ftplugin")
+if exists("b:did_scvim_reload")
   finish
 endif
-let b:did_ftplugin = 1
+let b:did_scvim_reload = 1
 
 if !exists("g:scvim_reload_mainfile")
   let g:scvim_reload_mainfile = "main.scd"
