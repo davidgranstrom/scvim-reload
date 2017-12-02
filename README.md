@@ -18,7 +18,9 @@ Installation
 
 If you are using vim-plug add the following to your vimrc
 
-    Plug 'davidgranstrom/scvim-reload'
+```vim
+Plug 'davidgranstrom/scvim-reload'
+```
 
 
 Usage
@@ -26,16 +28,21 @@ Usage
 
 ### Mappings
 
-This plugin doesn't provide any default mappings but you can use the mapping below to define your own.
+This plugin doesn't provide any default mappings but you can use the mappings below to define your own.
 
-    <Plug>(scvim-reload)
+`scvim-reload-toggle` enables to you toggle between play/stop in SuperCollider, it sends `thisProcess.hardStop` (Cmd-.) before running the main file, and stops if main file was already executed.
 
-Example (put this in your vimrc)
+```vim
+<Plug>(scvim-reload)
+<Plug>(scvim-reload-toggle)
+```
+
+**Example** (put this in your vimrc)
 
 ```vim
 augroup scvim_reload
   autocmd!
-  autocmd FileType supercollider nmap <buffer> <Enter> <Plug>(scvim-reload)
+  autocmd FileType supercollider nmap <buffer> <Enter> <Plug>(scvim-reload-toggle)
 augroup END
 ```
 
@@ -43,13 +50,18 @@ augroup END
 
 Update (save) all modified buffers and evalutate main file.
 
-    :SClangReload
+```vim
+:SClangReload
+:SClangReloadToggle
+```
 
 ### Variables
 
 Change the name of the main file (defaults to "main.scd")
 
-    let g:scvim_reload_mainfile = "my-file.scd"
+```vim
+let g:scvim_reload_mainfile = "my-file.scd"
+```
 
 
 Motivation
