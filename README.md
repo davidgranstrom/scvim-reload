@@ -40,10 +40,7 @@ This plugin doesn't provide any default mappings but you can use the mappings be
 **Example** (put this in your vimrc)
 
 ```vim
-augroup scvim_reload
-  autocmd!
-  autocmd FileType supercollider nmap <buffer> <Enter> <Plug>(scvim-reload-toggle)
-augroup END
+autocmd FileType supercollider nmap <buffer> <Enter> <Plug>(scvim-reload-toggle)
 ```
 
 ### Commands
